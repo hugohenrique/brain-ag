@@ -1,0 +1,19 @@
+version: "2.2"
+
+services:
+  # nuxt:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - .:/app
+  #   ports:
+  #     - "80:80"
+  #   environment:
+  #     DATABASE_URL: postgres://postgres:postgres@192.168.68.118:5432/brain-ag
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
